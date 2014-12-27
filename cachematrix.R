@@ -27,19 +27,19 @@ cacheSolve <- function(x, ...) {
 	im <- x$getim()
 	# try to  retrieve the inverse from the cache
 	    
-    	if(!is.null(im)) {
+    if(!is.null(im)) {
 	# If the inverse has already been calculated 
 		      
-       	  message("getting cached data")
-          return(im)
-    	}
+       	 message("getting cached data")
+         return(im)
+    }
 					      
 	data <- x$get()
 									
 	im <- solve(data)
 	# calculate the inverse
 							          
-    	x$setim(im)
+    x$setim(im)
 
 	im
         ## Return a matrix that is the inverse of 'x'
